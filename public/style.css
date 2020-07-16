@@ -9,12 +9,111 @@ audio {
       background-color: black;
   }
 
-  #buttons{
-     vertical-align: middle;
-
+  #contents{
+      width: 100%;
+      margin-top: 2em;
   }
 
+  .botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+
+  #record{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  border: none;
+  outline:none;
+  margin: 1em;
+ }
+ #record:hover{
+    background-color: #116414; /* Green */
+    color: white;
+ }
+
+   #stop{
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    border: none;
+    outline:none;
+    margin: 1em;
+
+   }
+   #stop:hover{
+      background-color: #831414; /* Green */
+      color: white;
+   }
+
+   #play{
+    background-color: #4c53af; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    border: none;
+    outline:none;
+    margin: 1em;
+
+   }
+   #play:hover{
+      background-color: #272670; /* Green */
+      color: white;
+   }
+
+   #save{
+    background-color: #d1d40b; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    border: none;
+    outline:none;
+    margin: 1em;
+
+   }
+   #save:hover{
+      background-color: #a38b04; /* Green */
+      color: white;
+   }
+
+
   h2{
-      padding: 2em;
-      color: rgb(202, 202, 202);
+      margin-top: 2em;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    text-align: center;
+  }
+
+  #saved-audio-messages{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

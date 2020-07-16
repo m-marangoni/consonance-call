@@ -9,16 +9,18 @@
     <title>Consonance Call</title>
   </head>
   <body>
-    <div id="buttons">
-    <button id="record">Record</button>
-    <button id="stop" disabled>Stop</button>
-    <button id="play" disabled>Play</button>
-    <button id="save" disabled>Save</button>
+    <div id="contents">
+      <h2>Allow microphone access and press save to record your message! </br> You can also play it in the browser or download as .wav file</h2>
+      <div class="botao">
+    <button  id="record">Record</button>
+    <button  id="stop" disabled>Stop</button>
+    <button  id="play" disabled>Play</button>
+    <button  id="save" disabled>Save</button>
   </div>
     <div id="saved-audio-messages">
       <h2>Saved messages</h2>
     </div>
-
+  </div>
     <script>
       const recordAudio = () =>
         new Promise(async resolve => {
