@@ -1,17 +1,53 @@
-audio {
-    display: block;
-  /* margin: 5px; */
-  }
+@font-face {
+   font-family: "reno";
+   src: url("RenoMono.otf");
+ }
 
+ @font-face {
+   font-family: "taler";
+   src: url("taller.ttf");
+ }
 
-
-  body {
+  html, body {
       background-color: black;
+      overflow-x: hidden;
+      z-index: -1000;
+      position: absolute;
+      font-family: "reno", Helvetica, sans-serif;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      overflow-y: hidden;
   }
+
+  span{
+   font-family: "taler", Helvetica, sans-serif;
+
+     z-index: -100;
+   position: absolute;
+   display: flex;
+   color: rgb(56, 56, 56);
+   font-size: 500px; 
+   font-weight: 100;
+   margin: 0 auto;
+   margin-left: 220px;
+   margin-top: -60px;
+stroke: solid black 2px; }
+
+section{
+   position: absolute;
+   /* z-index: -100; */
+   max-height: 100%;
+   margin-top: -2%;
+}
 
   #contents{
       width: 100%;
-      margin-top: 2em;
+      position: fixed;
+      min-height: 100%;
+      height: auto !important;
+      margin-top: 38%;
   }
 
   .botao{
@@ -22,22 +58,23 @@ audio {
   }
 
   #record{
-  background-color: #4CAF50; /* Green */
+   font-family: "reno", Helvetica, sans-serif;
+  background-color: white; /* Green */
   border: none;
-  color: white;
-  padding: 15px 32px;
+  color: black;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   transition-duration: 0.4s;
   border: none;
   outline:none;
   margin: 1em;
  }
  #record:hover{
-    background-color: #116414; /* Green */
-    color: white;
+    background-color: lightgray; /* Green */
+    color: black;
  }
  #record:disabled {
    color: rgb(170, 170, 170);
@@ -45,14 +82,16 @@ audio {
 }
 
    #stop{
-    background-color: red; /* Green */
+      font-family: "reno", Helvetica, sans-serif;
+
+    background-color: white; /* Green */
     border: none;
-    color: white;
-    padding: 15px 32px;
+    color: black;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     transition-duration: 0.4s;
     border: none;
     outline:none;
@@ -60,8 +99,8 @@ audio {
 
    }
    #stop:hover{
-      background-color: #831414; /* Green */
-      color: white;
+      background-color: lightgray; /* Green */
+      color: black;
    }
    #stop:disabled {
       color: rgb(170, 170, 170);
@@ -69,14 +108,16 @@ audio {
    }
 
    #play{
-    background-color: #4c53af; /* Green */
+      font-family: "reno", Helvetica, sans-serif;
+
+    background-color: white; /* Green */
     border: none;
-    color: white;
-    padding: 15px 32px;
+    color: black;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     transition-duration: 0.4s;
     border: none;
     outline:none;
@@ -84,8 +125,8 @@ audio {
 
    }
    #play:hover{
-      background-color: #272670; /* Green */
-      color: white;
+      background-color: lightgray; /* Green */
+      color: black;
    }
    #play:disabled {
       color: rgb(170, 170, 170);
@@ -93,14 +134,16 @@ audio {
    }
 
    #save{
-    background-color: #d1d40b; /* Green */
+      font-family: "reno", Helvetica, sans-serif;
+
+    background-color: white; /* Green */
     border: none;
-    color: white;
-    padding: 15px 32px;
+    color: black;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     transition-duration: 0.4s;
     border: none;
     outline:none;
@@ -108,26 +151,108 @@ audio {
 
    }
    #save:hover{
-      background-color: #a38b04; /* Green */
-      color: white;
+      background-color: lightgray; /* Green */
+      color: black;
    }
+   
    #save:disabled {
       color: rgb(170, 170, 170);
       background-color: rgba(239, 239, 239, 0.3);
    }
 
-
   h2{
-      margin-top: 2em;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "reno", Helvetica, sans-serif;
       color: rgb(255, 255, 255);
       display: flex;
       justify-content: center;
       align-items: center;
     text-align: center;
+    font-size: 0.85em;
   }
 
   #saved-audio-messages{
 display: flex;
 flex-wrap: wrap;
+visibility: hidden;
+/* display: none; */
   }
+
+  audio{
+   align-items: center;
+   max-width: 250px;
+   margin: 0.3em;
+   opacity: 0.8;
+  /* // transform: scale(1.05); */
+  }
+
+
+
+.nav1{
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: absolute;
+  display: flex;
+  margin-left: -440px;
+  top: 15px;
+}
+
+.nav2{
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: absolute;
+  top: 15px;
+  margin-left: 800px;
+}
+
+
+
+
+  .container {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.open-modal {
+  background-color: #5cf9d2;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  outline: none;
+  padding: 20px 40px;
+  text-transform: uppercase;
+}
+
+.open-modal:hover {
+  background-color: #bff2e5;
+}
+
+#modal {
+  background-color: #000000;
+  display: none;
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  padding: 50px;
+  border-radius: 5px;
+  z-index: 10;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 99999px rgba(36, 36, 36, 0.7);
+}
+#retrophone{
+position: fixed;
+margin-left: -324px;
+margin-top: -70px;
+}
+
+.close-modal {
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  float: right;
+  position: absolute;
+  top: -45px;
+  right: 1000px;
+}
