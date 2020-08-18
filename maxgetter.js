@@ -8,16 +8,16 @@ const app = express();
 
 (async () => {
 
-  await open('http://localhost:5000/sound/1?track=3',{wait: false}, {app: 'google chrome'});
+  await open('http://localhost:5000/public/messages/1?track=3',{wait: false}, {app: 'google chrome'});
 	console.log('got in 0');
-	await open('http://localhost:5000/sound/1?track=4', {wait: false}, {app: 'google chrome'});
+	await open('http://localhost:5000/public/messages/1?track=4', {wait: false}, {app: 'google chrome'});
 	console.log('got in 1');
-	await open('http://localhost:5000/sound/1?track=2', {wait: false}, {app: 'google chrome'});
+	await open('http://localhost:5000/public/messages/1?track=2', {wait: false}, {app: 'google chrome'});
 	console.log('got in 2');
 
 })();
 
-app.get("/sound/:id", (req, res) => {
+app.get("/public/messages/:id", (req, res) => {
     // res.header("Access-Control-Allow-Origin", "*");
     // res.header(
     //   "Access-Control-Allow-Headers",
@@ -34,7 +34,7 @@ app.get("/sound/:id", (req, res) => {
   });
 
   app.get("/sound/:id", (req, res) => {
-    const parser = parse({}, (_err, data) => {
+     parser = parse({}, (_err, data) => {
       if (Max) Max.outlet({ [req.query.track]: data[req.params.id] });
   
       res.sendStatus(200);
