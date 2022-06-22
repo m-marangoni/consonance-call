@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "add-filename-increment": "^1.0.0",
-    "async": "^3.2.0",
+    "async": "^3.2.2",
     "express": "^4.17.1",
     "ffmpeg": "0.0.4",
     "iohook": "^0.6.6",
