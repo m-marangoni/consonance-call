@@ -16,7 +16,7 @@
   "dependencies": {
     "add-filename-increment": "^1.0.0",
     "async": "^3.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "ffmpeg": "0.0.4",
     "iohook": "^0.6.6",
     "mic-recorder-to-mp3": "^2.2.2",
